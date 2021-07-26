@@ -1,0 +1,12 @@
+<h3>Search Result</h3>  
+
+		<% @results.each do |result| %>  
+				<strong>Context:</strong>
+				<%= result.context %><br> 
+				<strong>User_id:</strong> 
+				<%= result.user_id %><br> 
+				<strong>Article_id:</strong> 
+				<%= result.article_id %><br><br><br>  
+		<% end %>
+
+		<%= link_to "back", articles_path %>

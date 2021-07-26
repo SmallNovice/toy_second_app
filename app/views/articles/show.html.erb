@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @article.context %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @article.user_id %>
+</p>
+
+
+
+<h2>microposts</h2>
+<% @article.microposts.each do |micropost| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= micropost.context %>
+  </p>
+
+  <p>
+    <strong>user_id:</strong>
+    <%= micropost.user_id %>
+  </p>
+  <p>
+    <strong>article_id:</strong>
+    <%= micropost.article_id %>
+  </p>
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>  |
+<%= link_to 'microposts', microposts_path %>
+
